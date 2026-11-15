@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Klaude RP Launcher. .NET Framework 4.8 ist in jedem Windows 10/11 eingebaut, Spieler brauchen also nichts extra.
+       Die Oberfläche läuft in Edge WebView2 (ebenfalls in Windows eingebaut). Bauen: python werkzeuge/klauderp-launcher/bauen.py -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>KlaudeRP</AssemblyName>
+    <RootNamespace>KlaudeRP</RootNamespace>
+    <ApplicationIcon>klauderp.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PlatformTarget>x64</PlatformTarget>
+    <Product>Klaude RP</Product>
+    <AssemblyTitle>Klaude RP</AssemblyTitle>
+    <Description>Klaude RP</Description>
+    <Company>Klaude RP</Company>
+    <Copyright>Klaude RP</Copyright>
+    <Version>1.0.0</Version>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>de</SatelliteResourceLanguages>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.*" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+  </ItemGroup>
+
+  <!-- Eingebettet (legt bauen.py vor dem Bauen in eingebettet/ ab): Oberfläche und die WebView2-Dateien.
+       So reicht den Spielern eine einzige KlaudeRP.exe, die sich beim ersten Start selbst einrichtet. -->
+  <ItemGroup>
+    <EmbeddedResource Include="eingebettet\*" LogicalName="eingebettet/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,396 @@
+{
+ "hinweis": "Erzeugt von werkzeuge/klauderp-launcher/tasten-liste.py, nicht von Hand ändern. Deutsche Namen: tasten-namen.json.",
+ "gruppen": [
+  {
+   "name": "Allgemein",
+   "tasten": [
+    {
+     "ressource": "ox_inventory",
+     "befehl": "+inv",
+     "name": "Inventar öffnen",
+     "standard": "TAB"
+    },
+    {
+     "ressource": "ox_target",
+     "befehl": "+ox_target",
+     "name": "Interaktions-Auge (halten)",
+     "standard": "LMENU"
+    },
+    {
+     "ressource": "ox_lib",
+     "befehl": "+ox_lib-radial",
+     "name": "Schnellmenü (Rad)",
+     "standard": "Z"
+    },
+    {
+     "ressource": "ox_lib",
+     "befehl": "cancelprogress",
+     "name": "Laufende Tätigkeit abbrechen",
+     "standard": "X"
+    },
+    {
+     "ressource": "qbx_smallresources",
+     "befehl": "+elevator_interact",
+     "name": "Aufzug benutzen",
+     "standard": "E"
+    },
+    {
+     "ressource": "qbx_smallresources",
+     "befehl": "+rp_crouch",
+     "name": "Ducken",
+     "standard": "RCONTROL"
+    },
+    {
+     "ressource": "rp-polizei",
+     "befehl": "+rp_kapitulieren",
+     "name": "Hände hoch / Kapitulieren",
+     "standard": "H"
+    },
+    {
+     "ressource": "rp-gymtakt",
+     "befehl": "joggen",
+     "name": "Joggen an/aus",
+     "standard": "NULL"
+    },
+    {
+     "ressource": "rpemotes-reborn",
+     "befehl": "pointing",
+     "name": "Mit dem Finger zeigen",
+     "standard": "B"
+    },
+    {
+     "ressource": "rpemotes-reborn",
+     "befehl": "+crouch",
+     "name": "Schleichen",
+     "standard": "LCONTROL"
+    },
+    {
+     "ressource": "qbx_smallresources",
+     "befehl": "+tackle",
+     "name": "Umrennen (im Sprint)",
+     "standard": "E"
+    }
+   ]
+  },
+  {
+   "name": "Fahrzeug",
+   "tasten": [
+    {
+     "ressource": "qbx_vehiclekeys",
+     "befehl": "+togglelocks",
+     "name": "Auf- und abschließen",
+     "standard": "L"
+    },
+    {
+     "ressource": "qbx_vehiclekeys",
+     "befehl": "+toggleengine",
+     "name": "Motor an/aus",
+     "standard": "NULL"
+    },
+    {
+     "ressource": "qbx_seatbelt",
+     "befehl": "+toggleseatbelt",
+     "name": "Anschnallen",
+     "standard": "B"
+    },
+    {
+     "ressource": "rp-blinker",
+     "befehl": "blinker_links",
+     "name": "Blinker links",
+     "standard": "LEFT"
+    },
+    {
+     "ressource": "rp-blinker",
+     "befehl": "blinker_rechts",
+     "name": "Blinker rechts",
+     "standard": "RIGHT"
+    },
+    {
+     "ressource": "rp-blinker",
+     "befehl": "blinker_warn",
+     "name": "Warnblinker",
+     "standard": "UP"
+    },
+    {
+     "ressource": "rp-blinker",
+     "befehl": "blinker_aus",
+     "name": "Blinker aus",
+     "standard": "DOWN"
+    },
+    {
+     "ressource": "rp-autoradio",
+     "befehl": "autoradio_maus",
+     "name": "Autoradio: Maus an/aus",
+     "standard": "LMENU"
+    },
+    {
+     "ressource": "qbx_smallresources",
+     "befehl": "+push_vehicle_e",
+     "name": "Fahrzeug schieben",
+     "standard": "E"
+    },
+    {
+     "ressource": "qbx_smallresources",
+     "befehl": "+push_vehicle",
+     "name": "Fahrzeug schieben (zweite Taste)",
+     "standard": "LSHIFT"
+    },
+    {
+     "ressource": "rp-kofferraum",
+     "befehl": "rp_kofferraum_oeffnen",
+     "name": "Kofferraum öffnen",
+     "standard": "K"
+    },
+    {
+     "ressource": "ox_fuel",
+     "befehl": "startfueling",
+     "name": "Tanken",
+     "standard": "E"
+    },
+    {
+     "ressource": "qbx_smallresources",
+     "befehl": "+toggle_cruise_control",
+     "name": "Tempomat",
+     "standard": "Y"
+    }
+   ]
+  },
+  {
+   "name": "Sprache und Funk",
+   "tasten": [
+    {
+     "ressource": "yaca-voice",
+     "befehl": "+yaca:radioTalking",
+     "name": "Funk sprechen (halten)",
+     "standard": "LMENU"
+    },
+    {
+     "ressource": "rp-yaca-bruecke",
+     "befehl": "rp_stimme_reichweite",
+     "name": "Stimme: Reichweite wechseln",
+     "standard": "GRAVE"
+    },
+    {
+     "ressource": "mm_radio",
+     "befehl": "+radio",
+     "name": "Funkgerät öffnen",
+     "standard": "EQUALS"
+    },
+    {
+     "ressource": "yaca-voice",
+     "befehl": "+yaca:megaphone",
+     "name": "Megafon",
+     "standard": "B"
+    },
+    {
+     "ressource": "mm_radio",
+     "befehl": "++channel",
+     "name": "Nächster Funkkanal",
+     "standard": "PERIOD"
+    },
+    {
+     "ressource": "rp-yaca-bruecke",
+     "befehl": "+rp_stimme_fein",
+     "name": "Stimme fein einstellen (halten + Mausrad)",
+     "standard": "LSHIFT"
+    },
+    {
+     "ressource": "yaca-voice",
+     "befehl": "yaca:increaseVoiceRange",
+     "name": "Stimme: Reichweite größer",
+     "standard": "ADD"
+    },
+    {
+     "ressource": "yaca-voice",
+     "befehl": "yaca:decreaseVoiceRange",
+     "name": "Stimme: Reichweite kleiner",
+     "standard": "SUBTRACT"
+    },
+    {
+     "ressource": "mm_radio",
+     "befehl": "+-channel",
+     "name": "Vorheriger Funkkanal",
+     "standard": "COMMA"
+    }
+   ]
+  },
+  {
+   "name": "Emotes",
+   "tasten": [
+    {
+     "ressource": "rpemotes-reborn",
+     "befehl": "emotecancel",
+     "name": "Emote beenden",
+     "standard": "X"
+    },
+    {
+     "ressource": "rp-emotes",
+     "befehl": "rp_emotemenue",
+     "name": "Emote-Menü",
+     "standard": "F4"
+    },
+    {
+     "ressource": "rp-emotes",
+     "befehl": "+rp_emoterad",
+     "name": "Emote-Rad (halten)",
+     "standard": "N"
+    }
+   ]
+  },
+  {
+   "name": "Handy und Tablet",
+   "tasten": [
+    {
+     "ressource": "sd-phone",
+     "befehl": "+sdphone_toggle",
+     "name": "Handy öffnen",
+     "standard": "F1"
+    },
+    {
+     "ressource": "sd-tablet",
+     "befehl": "+sdtablet_toggle",
+     "name": "Tablet öffnen",
+     "standard": "F2"
+    },
+    {
+     "ressource": "sd-phone",
+     "befehl": "+sdphone_camface",
+     "name": "Handy-Kamera: in die Kamera schauen",
+     "standard": "RSHIFT"
+    },
+    {
+     "ressource": "sd-phone",
+     "befehl": "+sdphone_camlock",
+     "name": "Handy-Kamera: Selfie-Kamera bewegen",
+     "standard": "DOWN"
+    }
+   ]
+  },
+  {
+   "name": "Berufe",
+   "tasten": [
+    {
+     "ressource": "rp-jobcreator",
+     "befehl": "auftrag",
+     "name": "Aktuellen Auftrag anzeigen",
+     "standard": "NULL"
+    },
+    {
+     "ressource": "rp-job-taxi",
+     "befehl": "taxameter",
+     "name": "Taxi: Taxameter",
+     "standard": "J"
+    }
+   ]
+  },
+  {
+   "name": "Polizei",
+   "tasten": [
+    {
+     "ressource": "qbx_police",
+     "befehl": "+despawnSpikeStrip",
+     "name": "Nagelband einsammeln",
+     "standard": "E"
+    },
+    {
+     "ressource": "rp-polizei",
+     "befehl": "+rp_polizei_radar",
+     "name": "Radar an/aus",
+     "standard": "F6"
+    },
+    {
+     "ressource": "rp-polizei",
+     "befehl": "+rp_polizei_radar_grenze",
+     "name": "Radar-Grenze fürs Blitzerfoto",
+     "standard": "F5"
+    },
+    {
+     "ressource": "rp-polizei",
+     "befehl": "+rp_polizei_radar_fest",
+     "name": "Radar-Ziel festhalten",
+     "standard": "F7"
+    }
+   ]
+  },
+  {
+   "name": "Rettungsdienst",
+   "tasten": [
+    {
+     "ressource": "rp-medic",
+     "befehl": "+rp_medic_absteigen",
+     "name": "Von Trage oder Krankenbett steigen",
+     "standard": "X"
+    }
+   ]
+  },
+  {
+   "name": "Housing und Möbel",
+   "tasten": [
+    {
+     "ressource": "rp-housing",
+     "befehl": "+gizmoLocal",
+     "name": "Möbel: Welt- oder Möbel-Achsen",
+     "standard": "L"
+    },
+    {
+     "ressource": "rp-shellcreator",
+     "befehl": "+gizmoLocal",
+     "name": "Shell-Creator: Welt- oder Möbel-Achsen",
+     "standard": "L"
+    }
+   ]
+  },
+  {
+   "name": "Sonstiges",
+   "tasten": [
+    {
+     "ressource": "qbx_binoculars",
+     "befehl": "+closeBinoculars",
+     "name": "Fernglas weglegen",
+     "standard": "BACK"
+    },
+    {
+     "ressource": "rp-npcgespraeche",
+     "befehl": "npcohr",
+     "name": "NPC-Gespräche an/aus",
+     "standard": "NULL"
+    }
+   ]
+  },
+  {
+   "name": "Team (Admins)",
+   "tasten": [
+    {
+     "ressource": "rp-jobcreator",
+     "befehl": "jc",
+     "name": "Job-Creator öffnen",
+     "standard": "NULL"
+    },
+    {
+     "ressource": "rp-kamerafahrt",
+     "befehl": "+kamerafahrt_hilfe",
+     "name": "Kamerafahrt: Hilfe ein/aus",
+     "standard": "0"
+    },
+    {
+     "ressource": "rp-kamerafahrt",
+     "befehl": "+kamerafahrt_wechsel",
+     "name": "Kamerafahrt: nächstes Fahrzeug",
+     "standard": "PAGEDOWN"
+    },
+    {
+     "ressource": "rp-luftraum",
+     "befehl": "luftkimarke",
+     "name": "Luftraum: Fahr-KI ab hier",
+     "standard": "END"
+    },
+    {
+     "ressource": "rp-worldcreator",
+     "befehl": "wc",
+     "name": "World Creator öffnen",
+     "standard": "NULL"
+    }
+   ]
+  }
+ ]
+}

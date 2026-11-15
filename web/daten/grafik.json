@@ -1,0 +1,60 @@
+{
+  "hinweis": "Grafik-Voreinstellungen. Der Launcher schreibt nur diese Werte in den Abschnitt <graphics> von %APPDATA%\\CitizenFX\\gta5_settings.xml. Auflösung, Fenstermodus und alles andere bleibt, wie es ist.",
+  "einstellungen": [
+    { "schluessel": "TextureQuality", "name": "Texturen", "art": "stufe", "werte": [[0, "Normal"], [1, "Hoch"], [2, "Sehr hoch"]] },
+    { "schluessel": "ShaderQuality", "name": "Shader", "art": "stufe", "werte": [[0, "Normal"], [1, "Hoch"], [2, "Sehr hoch"]] },
+    { "schluessel": "ShadowQuality", "name": "Schatten", "art": "stufe", "werte": [[1, "Normal"], [2, "Hoch"], [3, "Sehr hoch"]] },
+    { "schluessel": "Shadow_SoftShadows", "name": "Weiche Schatten", "art": "stufe", "werte": [[0, "Scharf"], [1, "Weich"], [2, "Weicher"], [3, "Am weichsten"]] },
+    { "schluessel": "ReflectionQuality", "name": "Spiegelungen", "art": "stufe", "werte": [[0, "Normal"], [1, "Hoch"], [2, "Sehr hoch"], [3, "Ultra"]] },
+    { "schluessel": "ReflectionMSAA", "name": "Kantenglättung Spiegelungen", "art": "stufe", "werte": [[0, "Aus"], [2, "2×"], [4, "4×"], [8, "8×"]] },
+    { "schluessel": "WaterQuality", "name": "Wasser", "art": "stufe", "werte": [[0, "Normal"], [1, "Hoch"], [2, "Sehr hoch"]] },
+    { "schluessel": "ParticleQuality", "name": "Partikel", "art": "stufe", "werte": [[0, "Normal"], [1, "Hoch"], [2, "Sehr hoch"]] },
+    { "schluessel": "GrassQuality", "name": "Gras", "art": "stufe", "werte": [[0, "Normal"], [1, "Hoch"], [2, "Sehr hoch"], [3, "Ultra"]] },
+    { "schluessel": "SSAO", "name": "Umgebungsverdeckung", "art": "stufe", "werte": [[0, "Aus"], [1, "Normal"], [2, "Hoch"]] },
+    { "schluessel": "Tessellation", "name": "Tessellation", "art": "stufe", "werte": [[0, "Aus"], [1, "Normal"], [2, "Hoch"], [3, "Sehr hoch"]] },
+    { "schluessel": "PostFX", "name": "Nachbearbeitung", "art": "stufe", "werte": [[0, "Normal"], [1, "Hoch"], [2, "Sehr hoch"], [3, "Ultra"]] },
+    { "schluessel": "MSAA", "name": "Kantenglättung (MSAA)", "art": "stufe", "werte": [[0, "Aus"], [2, "2×"], [4, "4×"], [8, "8×"]] },
+    { "schluessel": "FXAA_Enabled", "name": "Kantenglättung (FXAA)", "art": "schalter" },
+    { "schluessel": "AnisotropicFiltering", "name": "Anisotrope Filterung", "art": "stufe", "werte": [[0, "Aus"], [2, "2×"], [4, "4×"], [8, "8×"], [16, "16×"]] },
+    { "schluessel": "LodScale", "name": "Sichtweite", "art": "regler", "min": 0, "max": 1 },
+    { "schluessel": "MaxLodScale", "name": "Erweiterte Sichtweite", "art": "regler", "min": 0, "max": 1 },
+    { "schluessel": "CityDensity", "name": "Bevölkerungsdichte", "art": "regler", "min": 0, "max": 1 },
+    { "schluessel": "PedVarietyMultiplier", "name": "Vielfalt Passanten", "art": "regler", "min": 0, "max": 1 },
+    { "schluessel": "VehicleVarietyMultiplier", "name": "Vielfalt Fahrzeuge", "art": "regler", "min": 0, "max": 1 },
+    { "schluessel": "MotionBlurStrength", "name": "Bewegungsunschärfe", "art": "regler", "min": 0, "max": 1 },
+    { "schluessel": "DoF", "name": "Tiefenschärfe", "art": "schalter" },
+    { "schluessel": "UltraShadows_Enabled", "name": "Hochauflösende Schatten", "art": "schalter" },
+    { "schluessel": "Shadow_LongShadows", "name": "Lange Schatten", "art": "schalter" },
+    { "schluessel": "HdStreamingInFlight", "name": "HD-Details im Flug", "art": "schalter" }
+  ],
+  "presets": [
+    {
+      "id": "leistung", "name": "Leistung", "beschreibung": "Möglichst viele Bilder pro Sekunde. Für schwächere PCs und Laptops.",
+      "werte": { "TextureQuality": 1, "ShaderQuality": 0, "ShadowQuality": 1, "Shadow_SoftShadows": 0, "ReflectionQuality": 0, "ReflectionMSAA": 0,
+        "WaterQuality": 0, "ParticleQuality": 0, "GrassQuality": 0, "SSAO": 0, "Tessellation": 0, "PostFX": 0, "MSAA": 0, "FXAA_Enabled": true,
+        "AnisotropicFiltering": 4, "LodScale": 0.3, "MaxLodScale": 0.0, "CityDensity": 0.4, "PedVarietyMultiplier": 0.4, "VehicleVarietyMultiplier": 0.4,
+        "MotionBlurStrength": 0.0, "DoF": false, "UltraShadows_Enabled": false, "Shadow_LongShadows": false, "HdStreamingInFlight": false }
+    },
+    {
+      "id": "ausgewogen", "name": "Ausgewogen", "beschreibung": "Gute Optik bei flüssigem Spiel. Für die meisten PCs die richtige Wahl.",
+      "werte": { "TextureQuality": 1, "ShaderQuality": 1, "ShadowQuality": 2, "Shadow_SoftShadows": 1, "ReflectionQuality": 1, "ReflectionMSAA": 0,
+        "WaterQuality": 1, "ParticleQuality": 1, "GrassQuality": 1, "SSAO": 1, "Tessellation": 1, "PostFX": 1, "MSAA": 0, "FXAA_Enabled": true,
+        "AnisotropicFiltering": 16, "LodScale": 0.7, "MaxLodScale": 0.2, "CityDensity": 0.7, "PedVarietyMultiplier": 0.7, "VehicleVarietyMultiplier": 0.7,
+        "MotionBlurStrength": 0.0, "DoF": false, "UltraShadows_Enabled": false, "Shadow_LongShadows": false, "HdStreamingInFlight": true }
+    },
+    {
+      "id": "schoen", "name": "Schön", "beschreibung": "Viel Detail, schöne Schatten und Spiegelungen. Braucht eine gute Grafikkarte.",
+      "werte": { "TextureQuality": 2, "ShaderQuality": 2, "ShadowQuality": 3, "Shadow_SoftShadows": 2, "ReflectionQuality": 2, "ReflectionMSAA": 2,
+        "WaterQuality": 2, "ParticleQuality": 2, "GrassQuality": 2, "SSAO": 2, "Tessellation": 2, "PostFX": 2, "MSAA": 2, "FXAA_Enabled": true,
+        "AnisotropicFiltering": 16, "LodScale": 1.0, "MaxLodScale": 0.5, "CityDensity": 0.8, "PedVarietyMultiplier": 0.8, "VehicleVarietyMultiplier": 0.8,
+        "MotionBlurStrength": 0.0, "DoF": false, "UltraShadows_Enabled": false, "Shadow_LongShadows": true, "HdStreamingInFlight": true }
+    },
+    {
+      "id": "ultra", "name": "Ultra", "beschreibung": "Alles auf Anschlag. Nur für sehr starke PCs, kostet viele Bilder pro Sekunde.",
+      "werte": { "TextureQuality": 2, "ShaderQuality": 2, "ShadowQuality": 3, "Shadow_SoftShadows": 3, "ReflectionQuality": 3, "ReflectionMSAA": 4,
+        "WaterQuality": 2, "ParticleQuality": 2, "GrassQuality": 3, "SSAO": 2, "Tessellation": 3, "PostFX": 3, "MSAA": 4, "FXAA_Enabled": true,
+        "AnisotropicFiltering": 16, "LodScale": 1.0, "MaxLodScale": 1.0, "CityDensity": 1.0, "PedVarietyMultiplier": 1.0, "VehicleVarietyMultiplier": 1.0,
+        "MotionBlurStrength": 0.0, "DoF": true, "UltraShadows_Enabled": true, "Shadow_LongShadows": true, "HdStreamingInFlight": true }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+ausgabe/
+bin/
+obj/
+__pycache__/
+*.pem

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klaude RP</title>
+<link rel="stylesheet" href="stil.css">
+</head>
+<body data-ansicht="start">
+<div id="buehne">
+
+  <!-- Hintergrund: Stadt in Schwarz-Weiß, Figur hinter dem Schild -->
+  <div class="hintergrund" aria-hidden="true"></div>
+  <div class="szene" aria-hidden="true">
+    <div class="figur-gruppe">
+      <div class="figur"></div>
+      <div class="figur-rand"></div>
+      <div class="hut-rand"></div>
+    </div>
+    <div class="logo-gruppe">
+      <div class="logo-glut"></div>
+      <img class="logo" src="bilder/logo.webp" alt="">
+    </div>
+  </div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="unterzeile" aria-hidden="true">ROLEPLAY</div>
+  <h1 class="nur-vorleser">Klaude RP Launcher</h1>
+
+  <!-- Titelleiste (zum Verschieben ziehen) -->
+  <header class="titelleiste" id="titelleiste">
+    <div class="version" id="version">Launcher</div>
+    <nav class="reiter" aria-label="Bereiche">
+      <button type="button" data-ziel="start" class="aktiv">Start</button>
+      <button type="button" data-ziel="grafik">Grafik</button>
+      <button type="button" data-ziel="tasten">Tasten</button>
+      <button type="button" data-ziel="wartung">Wartung</button>
+    </nav>
+    <div class="fensterknoepfe">
+      <button type="button" class="fk" id="knopf-min" aria-label="Minimieren"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10"/></svg></button>
+      <button type="button" class="fk zu" id="knopf-zu" aria-label="Schließen"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8"/></svg></button>
+    </div>
+  </header>
+
+  <!-- ===== START ===== -->
+  <section class="ansicht" id="ansicht-start" aria-label="Start">
+    <div class="frost kasten-neu">
+      <h2 class="kleinkopf">Neu</h2>
+      <ul class="neuigkeiten" id="neuigkeiten"><li class="leer">Lädt …</li></ul>
+    </div>
+
+    <div class="spielen-block">
+      <button type="button" class="spielen" id="knopf-spielen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5l13 7.5-13 7.5z"/></svg>
+        <span>SPIELEN</span>
+      </button>
+      <p class="spielen-hinweis" id="spielen-hinweis">Verbindet Server und TeamSpeak mit einem Klick</p>
+    </div>
+
+    <div class="frost kasten-status">
+      <div class="statuszeile">
+        <span class="punkt" id="punkt-server"></span>
+        <span class="statustext" id="text-server">Server wird geprüft …</span>
+        <span class="zahl" id="zahl-server"></span>
+      </div>
+      <div class="statuszeile">
+        <span class="punkt" id="punkt-ts"></span>
+        <span class="statustext" id="text-ts">TeamSpeak wird geprüft …</span>
+        <span class="klein" id="zahl-ts"></span>
+      </div>
+      <div class="trenner"></div>
+      <button type="button" class="textknopf" id="knopf-ts">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>
+        Nur TeamSpeak öffnen
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== GRAFIK ===== -->
+  <section class="ansicht" id="ansicht-grafik" aria-label="Grafik">
+    <div class="frost tafel">
+      <div class="tafel-kopf">
+        <div>
+          <h2>Grafik</h2>
+          <p class="unter" id="grafik-stand">Wird gelesen …</p>
+        </div>
+        <button type="button" class="knopf haupt" id="grafik-uebernehmen" disabled>Übernehmen</button>
+      </div>
+      <div class="presets" id="grafik-presets"></div>
+      <h3 class="kleinkopf abstand">Feineinstellung</h3>
+      <div class="rollbereich">
+        <div class="regler-raster" id="grafik-regler"></div>
+      </div>
+      <p class="fuss">Gilt nur für FiveM. Auflösung und Fenstermodus bleiben, wie sie sind. FiveM muss beim Übernehmen geschlossen sein.</p>
+    </div>
+  </section>
+
+  <!-- ===== TASTEN ===== -->
+  <section class="ansicht" id="ansicht-tasten" aria-label="Tasten">
+    <div class="frost tafel">
+      <div class="tafel-kopf">
+        <div>
+          <h2>Tasten</h2>
+          <p class="unter" id="tasten-stand">Wird gelesen …</p>
+        </div>
+        <div class="kopf-knoepfe">
+          <label class="nur-vorleser" for="tasten-profil">Profil</label>
+          <select id="tasten-profil" class="feld"></select>
+          <button type="button" class="knopf" id="tasten-speichern-als">Als Profil speichern</button>
+          <button type="button" class="knopf haupt" id="tasten-uebernehmen" disabled>Übernehmen</button>
+        </div>
+      </div>
+      <div class="rollbereich">
+        <div id="tasten-liste"></div>
+      </div>
+      <p class="fuss">Klick auf eine Taste, dann die neue Taste drücken (Esc bricht ab, Rechtsklick = keine Taste). Gilt für die Funktionen von Klaude RP, die normale GTA-Steuerung (Laufen, Schießen) stellst du im Spiel ein. FiveM muss beim Übernehmen geschlossen sein.</p>
+    </div>
+  </section>
+
+  <!-- ===== WARTUNG ===== -->
+  <section class="ansicht" id="ansicht-wartung" aria-label="Wartung">
+    <div class="frost tafel">
+      <div class="tafel-kopf"><div><h2>Wartung</h2><p class="unter">Cache, Updates und Sicherungen</p></div></div>
+      <div class="karten">
+        <article class="karte">
+          <h3>Cache von Klaude RP leeren</h3>
+          <p>Hilft bei fehlenden Texturen, unsichtbaren Autos oder Abstürzen beim Laden. Gelöscht werden <b>nur Dateien von Klaude RP</b>, der Cache anderer Server bleibt.</p>
+          <p class="wert" id="cache-wert">Noch nicht geprüft</p>
+          <div class="knopfzeile">
+            <button type="button" class="knopf" id="cache-pruefen">Prüfen</button>
+            <button type="button" class="knopf gefahr" id="cache-loeschen" disabled>Löschen …</button>
+          </div>
+        </article>
+        <article class="karte">
+          <h3>Launcher-Update</h3>
+          <p>Der Launcher sucht beim Start selbst nach Updates. Geladen werden nur geänderte Dateien.</p>
+          <p class="wert" id="update-wert">Version wird gelesen …</p>
+          <div class="balken versteckt" id="update-balken"><div class="fuellung" id="update-fuellung"></div></div>
+          <div class="knopfzeile">
+            <button type="button" class="knopf" id="update-pruefen">Nach Updates suchen</button>
+            <button type="button" class="knopf haupt versteckt" id="update-installieren">Jetzt installieren</button>
+          </div>
+        </article>
+        <article class="karte">
+          <h3>Sicherungen</h3>
+          <p>Bevor der Launcher Grafik oder Tasten ändert, sichert er deine alten Einstellungen. Hier holst du sie zurück.</p>
+          <div class="knopfzeile">
+            <button type="button" class="knopf" id="sicherung-grafik">Grafik zurück</button>
+            <button type="button" class="knopf" id="sicherung-tasten">Tasten zurück</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bestätigung -->
+  <div class="schleier versteckt" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-titel">
+    <div class="frost dialog">
+      <h2 id="dialog-titel">Sicher?</h2>
+      <p id="dialog-text"></p>
+      <div class="knopfzeile rechts">
+        <button type="button" class="knopf" id="dialog-nein">Abbrechen</button>
+        <button type="button" class="knopf haupt" id="dialog-ja">Ja</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Eingabe (Profilname) -->
+  <div class="schleier versteckt" id="eingabe" role="dialog" aria-modal="true" aria-labelledby="eingabe-titel">
+    <div class="frost dialog">
+      <h2 id="eingabe-titel">Profil speichern</h2>
+      <label class="feldname" for="eingabe-feld">Name</label>
+      <input class="feld breit" id="eingabe-feld" maxlength="30" autocomplete="off">
+      <div class="knopfzeile rechts">
+        <button type="button" class="knopf" id="eingabe-nein">Abbrechen</button>
+        <button type="button" class="knopf haupt" id="eingabe-ja">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="meldungen" id="meldungen" aria-live="polite"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

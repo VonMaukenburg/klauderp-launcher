@@ -1,0 +1,92 @@
+{
+  "hinweis": "Deutsche Namen und Gruppen für tasten-liste.py. Schlüssel = 'ressource|befehl'. 'standard' überschreibt die gefundene Standardtaste (z. B. wenn sie aus einer Convar oder JSON5 kommt), 'aus': true blendet eine Belegung aus (in der Config abgeschaltet). 'ergaenzt' = Belegungen, die das Skript nicht selbst findet.",
+  "namen": {
+    "ox_inventory|+inv": { "name": "Inventar öffnen", "gruppe": "Allgemein", "standard": "TAB" },
+    "ox_target|+ox_target": { "name": "Interaktions-Auge (halten)", "gruppe": "Allgemein" },
+    "ox_lib|+ox_lib-radial": { "name": "Schnellmenü (Rad)", "gruppe": "Allgemein" },
+    "ox_lib|cancelprogress": { "name": "Laufende Tätigkeit abbrechen", "gruppe": "Allgemein" },
+    "qbx_smallresources|+rp_crouch": { "name": "Ducken", "gruppe": "Allgemein" },
+    "rpemotes-reborn|+crouch": { "name": "Schleichen", "gruppe": "Allgemein" },
+    "rpemotes-reborn|pointing": { "name": "Mit dem Finger zeigen", "gruppe": "Allgemein" },
+    "qbx_smallresources|+tackle": { "name": "Umrennen (im Sprint)", "gruppe": "Allgemein" },
+    "qbx_smallresources|+elevator_interact": { "name": "Aufzug benutzen", "gruppe": "Allgemein" },
+    "rp-polizei|+rp_kapitulieren": { "name": "Hände hoch / Kapitulieren", "gruppe": "Allgemein" },
+    "rp-gymtakt|joggen": { "name": "Joggen an/aus", "gruppe": "Allgemein" },
+
+    "qbx_vehiclekeys|+togglelocks": { "name": "Auf- und abschließen", "gruppe": "Fahrzeug" },
+    "qbx_vehiclekeys|+toggleengine": { "name": "Motor an/aus", "gruppe": "Fahrzeug" },
+    "qbx_seatbelt|+toggleseatbelt": { "name": "Anschnallen", "gruppe": "Fahrzeug" },
+    "qbx_smallresources|+toggle_cruise_control": { "name": "Tempomat", "gruppe": "Fahrzeug" },
+    "rp-kofferraum|rp_kofferraum_oeffnen": { "name": "Kofferraum öffnen", "gruppe": "Fahrzeug" },
+    "rp-blinker|blinker_links": { "name": "Blinker links", "gruppe": "Fahrzeug" },
+    "rp-blinker|blinker_rechts": { "name": "Blinker rechts", "gruppe": "Fahrzeug" },
+    "rp-blinker|blinker_warn": { "name": "Warnblinker", "gruppe": "Fahrzeug" },
+    "rp-blinker|blinker_aus": { "name": "Blinker aus", "gruppe": "Fahrzeug" },
+    "rp-autoradio|autoradio_maus": { "name": "Autoradio: Maus an/aus", "gruppe": "Fahrzeug" },
+    "ox_fuel|startfueling": { "name": "Tanken", "gruppe": "Fahrzeug" },
+    "qbx_smallresources|+push_vehicle_e": { "name": "Fahrzeug schieben", "gruppe": "Fahrzeug" },
+    "qbx_smallresources|+push_vehicle": { "name": "Fahrzeug schieben (zweite Taste)", "gruppe": "Fahrzeug" },
+
+    "yaca-voice|+yaca:radioTalking": { "name": "Funk sprechen (halten)", "gruppe": "Sprache und Funk", "standard": "LMENU" },
+    "rp-yaca-bruecke|rp_stimme_reichweite": { "name": "Stimme: Reichweite wechseln", "gruppe": "Sprache und Funk" },
+    "rp-yaca-bruecke|+rp_stimme_fein": { "name": "Stimme fein einstellen (halten + Mausrad)", "gruppe": "Sprache und Funk" },
+    "yaca-voice|yaca:increaseVoiceRange": { "name": "Stimme: Reichweite größer", "gruppe": "Sprache und Funk" },
+    "yaca-voice|yaca:decreaseVoiceRange": { "name": "Stimme: Reichweite kleiner", "gruppe": "Sprache und Funk" },
+    "yaca-voice|+yaca:megaphone": { "name": "Megafon", "gruppe": "Sprache und Funk" },
+    "mm_radio|+radio": { "name": "Funkgerät öffnen", "gruppe": "Sprache und Funk" },
+    "mm_radio|++channel": { "name": "Nächster Funkkanal", "gruppe": "Sprache und Funk" },
+    "mm_radio|+-channel": { "name": "Vorheriger Funkkanal", "gruppe": "Sprache und Funk" },
+    "yaca-voice|+yaca:secondaryRadioTalking": { "aus": true },
+    "yaca-voice|+yaca:changeVoiceRangeWithMousewheel": { "aus": true },
+
+    "rp-emotes|rp_emotemenue": { "name": "Emote-Menü", "gruppe": "Emotes" },
+    "rp-emotes|+rp_emoterad": { "name": "Emote-Rad (halten)", "gruppe": "Emotes" },
+    "rpemotes-reborn|emotecancel": { "name": "Emote beenden", "gruppe": "Emotes" },
+    "rpemotes-reborn|emoteui": { "aus": true },
+    "rpemotes-reborn|+ragdoll": { "aus": true },
+    "rpemotes-reborn|+crawl": { "aus": true },
+
+    "sd-phone|+sdphone_toggle": { "name": "Handy öffnen", "gruppe": "Handy und Tablet" },
+    "sd-phone|+sdphone_camlock": { "name": "Handy-Kamera: Selfie-Kamera bewegen", "gruppe": "Handy und Tablet" },
+    "sd-phone|+sdphone_camface": { "name": "Handy-Kamera: in die Kamera schauen", "gruppe": "Handy und Tablet" },
+    "sd-tablet|+sdtablet_toggle": { "name": "Tablet öffnen", "gruppe": "Handy und Tablet" },
+    "sd-phone|+sdphone_look": { "aus": true },
+    "sd-tablet|+sdtablet_look": { "aus": true },
+
+    "rp-job-taxi|taxameter": { "name": "Taxi: Taxameter", "gruppe": "Berufe" },
+    "rp-jobcreator|auftrag": { "name": "Aktuellen Auftrag anzeigen", "gruppe": "Berufe" },
+
+    "rp-polizei|+rp_polizei_radar": { "name": "Radar an/aus", "gruppe": "Polizei" },
+    "rp-polizei|+rp_polizei_radar_fest": { "name": "Radar-Ziel festhalten", "gruppe": "Polizei" },
+    "rp-polizei|+rp_polizei_radar_grenze": { "name": "Radar-Grenze fürs Blitzerfoto", "gruppe": "Polizei" },
+    "qbx_police|+despawnSpikeStrip": { "name": "Nagelband einsammeln", "gruppe": "Polizei" },
+
+    "rp-medic|+rp_medic_absteigen": { "name": "Von Trage oder Krankenbett steigen", "gruppe": "Rettungsdienst" },
+
+    "rp-housing|+gizmoLocal": { "name": "Möbel: Welt- oder Möbel-Achsen", "gruppe": "Housing und Möbel" },
+    "rp-shellcreator|+gizmoLocal": { "name": "Shell-Creator: Welt- oder Möbel-Achsen", "gruppe": "Housing und Möbel" },
+
+    "qbx_binoculars|+closeBinoculars": { "name": "Fernglas weglegen", "gruppe": "Sonstiges" },
+    "rp-npcgespraeche|npcohr": { "name": "NPC-Gespräche an/aus", "gruppe": "Sonstiges" },
+
+    "rp-worldcreator|wc": { "name": "World Creator öffnen", "gruppe": "Team (Admins)" },
+    "rp-jobcreator|jc": { "name": "Job-Creator öffnen", "gruppe": "Team (Admins)" },
+    "rp-kamerafahrt|+kamerafahrt_hilfe": { "name": "Kamerafahrt: Hilfe ein/aus", "gruppe": "Team (Admins)" },
+    "rp-kamerafahrt|+kamerafahrt_wechsel": { "name": "Kamerafahrt: nächstes Fahrzeug", "gruppe": "Team (Admins)" },
+    "rp-luftraum|luftkimarke": { "name": "Luftraum: Fahr-KI ab hier", "gruppe": "Team (Admins)" }
+  },
+  "reihenfolge": {
+    "ox_inventory|+inv": 1, "ox_target|+ox_target": 2, "ox_lib|+ox_lib-radial": 3, "ox_lib|cancelprogress": 4,
+    "qbx_vehiclekeys|+togglelocks": 1, "qbx_vehiclekeys|+toggleengine": 2, "qbx_seatbelt|+toggleseatbelt": 3,
+    "rp-blinker|blinker_links": 10, "rp-blinker|blinker_rechts": 11, "rp-blinker|blinker_warn": 12, "rp-blinker|blinker_aus": 13,
+    "yaca-voice|+yaca:radioTalking": 1, "rp-yaca-bruecke|rp_stimme_reichweite": 2,
+    "sd-phone|+sdphone_toggle": 1, "sd-tablet|+sdtablet_toggle": 2
+  },
+  "ergaenzt": [
+    { "ressource": "ox_target", "befehl": "+ox_target", "beschreibung": "Interaktions-Auge", "standard": "LMENU" },
+    { "ressource": "rp-blinker", "befehl": "blinker_links", "beschreibung": "Blinker links an/aus", "standard": "LEFT" },
+    { "ressource": "rp-blinker", "befehl": "blinker_rechts", "beschreibung": "Blinker rechts an/aus", "standard": "RIGHT" },
+    { "ressource": "rp-blinker", "befehl": "blinker_warn", "beschreibung": "Warnblinker an", "standard": "UP" },
+    { "ressource": "rp-blinker", "befehl": "blinker_aus", "beschreibung": "Blinker und Warnblinker aus", "standard": "DOWN" }
+  ]
+}

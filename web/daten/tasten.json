@@ -356,41 +356,6 @@
      "standard": "NULL"
     }
    ]
-  },
-  {
-   "name": "Team (Admins)",
-   "tasten": [
-    {
-     "ressource": "rp-jobcreator",
-     "befehl": "jc",
-     "name": "Job-Creator öffnen",
-     "standard": "NULL"
-    },
-    {
-     "ressource": "rp-kamerafahrt",
-     "befehl": "+kamerafahrt_hilfe",
-     "name": "Kamerafahrt: Hilfe ein/aus",
-     "standard": "0"
-    },
-    {
-     "ressource": "rp-kamerafahrt",
-     "befehl": "+kamerafahrt_wechsel",
-     "name": "Kamerafahrt: nächstes Fahrzeug",
-     "standard": "PAGEDOWN"
-    },
-    {
-     "ressource": "rp-luftraum",
-     "befehl": "luftkimarke",
-     "name": "Luftraum: Fahr-KI ab hier",
-     "standard": "END"
-    },
-    {
-     "ressource": "rp-worldcreator",
-     "befehl": "wc",
-     "name": "World Creator öffnen",
-     "standard": "NULL"
-    }
-   ]
   }
  ]
 }

@@ -235,6 +235,8 @@ def main():
         if not standard:
             standard = 'NULL'  # so schreibt FiveM selbst „keine Taste“
         gruppe = n.get('gruppe', 'Sonstiges')
+        if gruppe == 'Team (Admins)':
+            continue  # Admin-Tasten gehören nicht in den Spieler-Launcher; ihre rbind-Zeilen bleiben unangetastet
         eintraege.setdefault(gruppe, []).append({'ressource': f['ressource'], 'befehl': f['befehl'], 'name': n['name'], 'standard': standard})
 
     gruppen = []

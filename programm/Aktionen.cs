@@ -220,7 +220,7 @@ namespace KlaudeRP
             }
             var argumente = "fivem://connect/" + ServerAdresse();
             var vorher = NeuestesFiveMLog(fivem);
-            FiveMStarten(fivem, argumente);
+            FiveMStarten(fivem, argumente, 1);
             _ = FiveMBeobachten(fivem, argumente, vorher);
             return Antwort(hinweis == null, hinweis ?? "FiveM startet und verbindet sich mit Klaude RP.");
         }
@@ -231,13 +231,26 @@ namespace KlaudeRP
             catch { return false; }
         }
 
-        private static void FiveMStarten(string fivem, string argumente)
+        private static void FiveMStarten(string fivem, string argumente, int versuch)
         {
-            Process.Start(new ProcessStartInfo(Path.Combine(fivem, "FiveM.exe"), argumente)
-            {
-                UseShellExecute = false,
-                WorkingDirectory = fivem,
-            });
+            // FiveM (der Rockstar-Teil) bricht mit „This application should be launched directly from the shell or a web browser“ ab,
+            // wenn KlaudeRP.exe es selbst startet (15.11.2026, echte Klicks). Der alte PowerShell-Launcher funktioniert: Dort
+            // startet ein Windows-Programm FiveM und bleibt dabei offen. Darum wie dort: eine unsichtbare PowerShell mit
+            // Start-Process "fivem://…", die noch eine Minute offen bleibt. Mit 1.0.4 3 von 3 Mal erfolgreich; der Weg über
+            // cmd.exe start /wait wurde 3 von 3 Mal abgelehnt und ist darum raus.
+            var start = new ProcessStartInfo(Path.Combine(Environment.SystemDirectory, @"WindowsPowerShell\v1.0\powershell.exe"),
+                $"-NoProfile -NonInteractive -WindowStyle Hidden -Command \"Start-Process '{argumente}'; Start-Sleep 60\"");
+            start.UseShellExecute = false;
+            start.CreateNoWindow = true;
+            start.WindowStyle = ProcessWindowStyle.Hidden;
+            start.WorkingDirectory = fivem;
+            StartLog($"Versuch {versuch}: {Path.GetFileName(start.FileName)} {start.Arguments}");
+            Process.Start(start);
+        }
+
+        private static void StartLog(string text)
+        {
+            try { File.AppendAllText(Path.Combine(Installation.DatenOrdner, "start-log.txt"), DateTime.Now + " " + text + "\r\n"); } catch { }
         }
 
         private static string NeuestesFiveMLog(string fivem)
@@ -250,9 +263,8 @@ namespace KlaudeRP
             catch { return null; }
         }
 
-        // Einmal (15.11.2026) brach FiveM beim Start ab mit „This application should be launched directly from the shell or a web browser“,
-        // danach ließ es sich nicht mehr nachstellen. Darum: neues FiveM-Log bis zu 60 s beobachten, bei genau diesem Fehler FiveM beenden
-        // und einmal neu starten. Klappt auch das nicht, sagt der Launcher es.
+        // Sicherheitsnetz: neues FiveM-Log bis zu 60 s beobachten. Bricht FiveM mit „This application should be launched directly from the
+        // shell or a web browser“ ab, FiveM beenden und einmal neu starten. Klappt auch das nicht, sagt der Launcher es.
         private async Task FiveMBeobachten(string fivem, string argumente, string altesLog)
         {
             try
@@ -260,7 +272,8 @@ namespace KlaudeRP
                 for (var versuch = 1; versuch <= 2; versuch++)
                 {
                     var ergebnis = await AufFiveMLogWarten(fivem, altesLog);
-                    if (ergebnis != "abbruch") return;           // läuft oder nicht feststellbar: nichts tun
+                    StartLog($"Versuch {versuch}: Ergebnis {ergebnis}");
+                    if (ergebnis != "abbruch") return;          // läuft oder nicht feststellbar: nichts tun
                     foreach (var p in Process.GetProcesses())
                     {
                         try { if (p.ProcessName.StartsWith("FiveM", StringComparison.OrdinalIgnoreCase)) p.Kill(); } catch { }
@@ -268,7 +281,7 @@ namespace KlaudeRP
                     if (versuch == 2) break;
                     await Task.Delay(3000);
                     altesLog = NeuestesFiveMLog(fivem);
-                    FiveMStarten(fivem, argumente);
+                    FiveMStarten(fivem, argumente, versuch + 1);
                 }
                 fenster.Ereignis(new Dictionary<string, object>
                 {
